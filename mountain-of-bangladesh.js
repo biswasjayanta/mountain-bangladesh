@@ -9,7 +9,7 @@ const subtitle = document.getElementById( 'subtitle' );
 // Paste your OpenTopography API key here
 const ELEVATION_APIKEY = 'e28ccd290cedf68367833a81ccc1ffe0';
 
-if ( !ELEVATION_APIKEY || ELEVATION_APIKEY === 'PASTE_YOUR_API_KEY_HERE' ) {
+if ( !ELEVATION_APIKEY || ELEVATION_APIKEY === 'e28ccd290cedf68367833a81ccc1ffe0' ) {
   const error = Error( 'Paste your OpenTopography API key into mountain-of-bangladesh.js' );
   container.innerHTML = '<p style="color:white; padding:20px;">' + error.message + '</p>';
   throw error;
