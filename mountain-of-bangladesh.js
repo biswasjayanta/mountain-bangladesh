@@ -1,3 +1,4 @@
+import Procedural from 'procedural-gl';
 // Initialize the engine with a location and inject into page
 const container = document.getElementById( 'container' );
 const peakList = document.getElementById( 'peak-list' );
