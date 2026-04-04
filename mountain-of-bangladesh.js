@@ -23,7 +23,9 @@ if ( !MAPTILER_APIKEY ) {
 // Define custom URLs for elevation (terrain-rgb) and imagery (satellite)
 const datasource = {
   imagery: {
-    urlFormat: 'https://api.maptiler.com/tiles/hand-drawn-hillshade/{z}/{x}/{y}.webp?key=XL7pq33CzA3lwocBF57x'
+    urlFormat: 'https://api.maptiler.com/tiles/hand-drawn-hillshade/{z}/{x}/{y}.webp?key=XL7pq33CzA3lwocBF57x',
+    attribution: '&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> ' +
+      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
   }
 };
 
