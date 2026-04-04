@@ -8,9 +8,9 @@ const subtitle = document.getElementById( 'subtitle' );
 
 // Get a FREE key from https://cloud.maptiler.com/account/
 // MapTiler provides both elevation + imagery that Procedural GL supports natively
-const MAPTILER_APIKEY = 'Zj6GFD672vFGXDlBWdBk';
+const MAPTILER_APIKEY = 'XL7pq33CzA3lwocBF57x';
 
-if ( !MAPTILER_APIKEY || MAPTILER_APIKEY === 'Zj6GFD672vFGXDlBWdBk' ) {
+if ( !MAPTILER_APIKEY || MAPTILER_APIKEY === 'XL7pq33CzA3lwocBF57x' ) {
   container.innerHTML = '<p style="color:white; padding:20px; font-family:sans-serif;">' +
     'API key missing. Get a free key from ' +
     '<a href="https://cloud.maptiler.com/account/" style="color:#4fc3f7;">MapTiler</a>' +
