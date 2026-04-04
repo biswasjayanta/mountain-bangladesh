@@ -6,23 +6,22 @@ const stencilOverlay = document.getElementById( 'stencil' );
 const title = document.getElementById( 'title' );
 const subtitle = document.getElementById( 'subtitle' );
 
-// Paste your OpenTopography API key here
-const ELEVATION_APIKEY = 'e28ccd290cedf68367833a81ccc1ffe0';
+// Get a FREE key from https://cloud.maptiler.com/account/
+// MapTiler provides both elevation + imagery that Procedural GL supports natively
+const MAPTILER_APIKEY = 'Zj6GFD672vFGXDlBWdBk';
 
-if ( !ELEVATION_APIKEY || ELEVATION_APIKEY === 'e28ccd290cedf68367833a81ccc1ffe0' ) {
-  const error = Error( 'Paste your OpenTopography API key into mountain-of-bangladesh.js' );
-  container.innerHTML = '<p style="color:white; padding:20px;">' + error.message + '</p>';
-  throw error;
+if ( !MAPTILER_APIKEY || MAPTILER_APIKEY === 'Zj6GFD672vFGXDlBWdBk' ) {
+  container.innerHTML = '<p style="color:white; padding:20px; font-family:sans-serif;">' +
+    'API key missing. Get a free key from ' +
+    '<a href="https://cloud.maptiler.com/account/" style="color:#4fc3f7;">MapTiler</a>' +
+    ' and paste it into mountain-of-bangladesh.js</p>';
+  throw Error( 'MapTiler API key missing' );
 }
 
+// Use the built-in MapTiler provider — handles both elevation and imagery
 const datasource = {
-  elevation: {
-    apiKey: ELEVATION_APIKEY
-  },
-  imagery: {
-    urlFormat: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
-    attribution: 'Tiles &copy; <a href="https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer">Esri</a>'
-  }
+  provider: 'maptiler',
+  apiKey: MAPTILER_APIKEY
 }
 Procedural.init( { container, datasource } );
 
