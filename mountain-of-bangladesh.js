@@ -26,7 +26,7 @@ const datasource = {
     urlFormat: 'https://api.maptiler.com/tiles/terrain-rgb-v2/{z}/{x}/{y}.webp?key=XL7pq33CzA3lwocBF57x'
   },
   imagery: {
-    urlFormat: 'https://api.maptiler.com/maps/satellite-v4/style.json?key=XL7pq33CzA3lwocBF57x'
+    urlFormat: 'https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key=XL7pq33CzA3lwocBF57x'
   }
 };
 
