@@ -22,9 +22,6 @@ if ( !MAPTILER_APIKEY ) {
 // Use the built-in MapTiler provider — handles both elevation and imagery
 // Define custom URLs for elevation (terrain-rgb) and imagery (satellite)
 const datasource = {
-  elevation: {
-    urlFormat: 'https://api.maptiler.com/tiles/terrain-rgb-v2/{z}/{x}/{y}.webp?key=XL7pq33CzA3lwocBF57x'
-  },
   imagery: {
     urlFormat: 'https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key=XL7pq33CzA3lwocBF57x'
   }
