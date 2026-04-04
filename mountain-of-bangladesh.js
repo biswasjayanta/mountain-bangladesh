@@ -10,13 +10,11 @@ const subtitle = document.getElementById( 'subtitle' );
 // MapTiler provides both elevation + imagery that Procedural GL supports natively
 const MAPTILER_APIKEY = 'XL7pq33CzA3lwocBF57x';
 
-if ( !MAPTILER_APIKEY || MAPTILER_APIKEY === 'XL7pq33CzA3lwocBF57x' ) {
-  container.innerHTML = '<p style="color:white; padding:20px; font-family:sans-serif;">' +
-    'API key missing. Get a free key from ' +
-    '<a href="https://cloud.maptiler.com/account/" style="color:#4fc3f7;">MapTiler</a>' +
-    ' and paste it into mountain-of-bangladesh.js</p>';
-  throw Error( 'MapTiler API key missing' );
-}
+if ( !MAPTILER_APIKEY ) {
+          const error = Error( 'Modify index.html to include API keys' );
+          container.innerHTML = 'Modify datasource definition to contain a valid API key. <a href="https://cloud.maptiler.com/account/?ref=procedural">Click here to get a free API key</a>'; 
+          throw error;
+        }
 
 // Use the built-in MapTiler provider — handles both elevation and imagery
 const datasource = {
