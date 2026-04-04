@@ -6,12 +6,12 @@ const stencilOverlay = document.getElementById( 'stencil' );
 const title = document.getElementById( 'title' );
 const subtitle = document.getElementById( 'subtitle' );
 
-// Vite replaces this at build time with the value from your .env file
+// Paste your OpenTopography API key here
 const ELEVATION_APIKEY = 'e28ccd290cedf68367833a81ccc1ffe0';
 
-if ( !ELEVATION_APIKEY ) {
-  const error = Error( 'API key missing. Create a .env file with VITE_API_KEY=your_key' );
-  container.innerHTML = `<p style="color:white; padding:20px;">${error.message}</p>`;
+if ( !ELEVATION_APIKEY || ELEVATION_APIKEY === 'PASTE_YOUR_API_KEY_HERE' ) {
+  const error = Error( 'Paste your OpenTopography API key into mountain-of-bangladesh.js' );
+  container.innerHTML = '<p style="color:white; padding:20px;">' + error.message + '</p>';
   throw error;
 }
 
@@ -60,7 +60,7 @@ function loadPeak( feature ) {
         "type": "Feature",
         "geometry": feature.geometry,
         "properties": {
-          "name": `${name}`,
+          "name": name,
           "background": "rgba(35,46,50,1)",
           "fontSize": 18,
           "padding": 10,
@@ -103,11 +103,10 @@ fetch( 'mountain.geojson' )
       const [longitude, latitude] = locations.features[ 0 ].geometry.coordinates;
       Procedural.displayLocation( { latitude, longitude } );
     } else {
-      // Fallback to Sylhet if GeoJSON is empty
       Procedural.displayLocation( { latitude: 24.8949, longitude: 91.8687 } );
     }
 
-    // Populate peak list — SINGLE forEach (was duplicated before)
+    // Populate peak list
     locations.features.forEach( ( peak, i ) => {
       const li = document.createElement( 'li' );
       let p = document.createElement( 'p' );
