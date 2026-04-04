@@ -123,7 +123,7 @@ fetch( 'mountain.geojson' )
     li.appendChild( p );
     peakList.appendChild( li );
     li.addEventListener( 'click', () => {
-      window.location = 'https://biswasjayanta.github.io/mountain-bangladesh/';
+      window.location = 'https://github.com/biswasjayanta/mountain-bangladesh/';
     } );
 
     // Add overlay showing all peaks as dots
