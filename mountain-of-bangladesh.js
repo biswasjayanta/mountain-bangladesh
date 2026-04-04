@@ -46,7 +46,7 @@ function loadPeak( feature ) {
   const { name } = feature.properties;
   const [longitude, latitude] = feature.geometry.coordinates;
   Procedural.displayLocation( { latitude, longitude } );
-  Procedural.setEnvironment( env );
+  /*Procedural.setEnvironment( env );*/
   title.innerHTML = '&lt;';
   title.classList.remove( 'hidden' );
   peakListOverlay.classList.add( 'hidden' );

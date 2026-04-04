@@ -40,7 +40,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   transition: all 2s 1s ease-in-out, background-color 0.5s 1s ease-out;
-  transform: scale(80);
+  transform: scale(250);
 }
 
 #stencil.hidden {
