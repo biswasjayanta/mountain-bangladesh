@@ -20,10 +20,16 @@ if ( !MAPTILER_APIKEY ) {
 }
 
 // Use the built-in MapTiler provider — handles both elevation and imagery
+// Define custom URLs for elevation (terrain-rgb) and imagery (satellite)
 const datasource = {
-  provider: 'maptiler',
-  apiKey: MAPTILER_APIKEY
-}
+  elevation: {
+    urlFormat: 'https://api.maptiler.com/tiles/terrain-rgb-v2/{z}/{x}/{y}.webp?key=XL7pq33CzA3lwocBF57x'
+  },
+  imagery: {
+    urlFormat: 'https://api.maptiler.com/tiles/satellite-mediumres-2018/{z}/{x}/{y}.jpg?key=XL7pq33CzA3lwocBF57x'
+  }
+};
+
 Procedural.init( { container, datasource } );
 
 const env = {
