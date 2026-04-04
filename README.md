@@ -2,6 +2,6 @@
 
 Interactive 3D terrain viewer built with [Procedural GL JS](https://github.com/felixpalmer/procedural-gl-js).
 
-[View Page](www.biswasjayanta.github.io/mountain-bangladesh/)
+[View Page](https://biswasjayanta.github.io/mountain-bangladesh/)
    ```
 
