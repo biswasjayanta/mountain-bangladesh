@@ -23,7 +23,7 @@ if ( !MAPTILER_APIKEY ) {
 // Define custom URLs for elevation (terrain-rgb) and imagery (satellite)
 const datasource = {
   imagery: {
-    urlFormat: 'https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key=XL7pq33CzA3lwocBF57x'
+    urlFormat: 'https://api.maptiler.com/tiles/hand-drawn-hillshade/{z}/{x}/{y}.webp?key=XL7pq33CzA3lwocBF57x'
   }
 };
 
