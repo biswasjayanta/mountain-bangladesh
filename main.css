@@ -34,7 +34,7 @@ h2 {
   height: 100%;
   pointer-events: none;
   background-color: rgba(20, 23, 25, 0);
-  background-image: url(stencil3.png);
+  /*background-image: url(stencil3.png);*/
   background-image: url(hill_pic.jpg);
   background-size: cover;
   background-repeat: no-repeat;
