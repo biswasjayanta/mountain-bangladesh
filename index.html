@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mountains-Lake-Waterfalls of Bangladesh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1 id="title" class="hidden"></h1>
+    <h2 id="subtitle"></h2>
+    <div style="position: absolute; width: 100%; height: 100%;" id="container"></div>
+    <div id="stencil" class="hidden"></div>
+    <div id="peak-list-overlay" class="hidden">
+      <ul id="peak-list"></ul>
+    </div>
+
+    <!-- Load procedural-gl FIRST as a regular script so Procedural is global -->
+    <script src="https://unpkg.com/procedural-gl/build/procedural-gl.js"></script>
+    <!-- Load your code as type="module" so import.meta.env works with Vite -->
+    <script type="module" src="./mountain-of-bangladesh.js"></script>
+  </body>
+</html>
