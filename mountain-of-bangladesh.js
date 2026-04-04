@@ -7,7 +7,7 @@ const title = document.getElementById( 'title' );
 const subtitle = document.getElementById( 'subtitle' );
 
 // Vite replaces this at build time with the value from your .env file
-const ELEVATION_APIKEY = import.meta.env.VITE_API_KEY;
+const ELEVATION_APIKEY = 'e28ccd290cedf68367833a81ccc1ffe0';
 
 if ( !ELEVATION_APIKEY ) {
   const error = Error( 'API key missing. Create a .env file with VITE_API_KEY=your_key' );
