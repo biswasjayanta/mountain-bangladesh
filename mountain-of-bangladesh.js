@@ -22,7 +22,7 @@ if ( !MAPTILER_APIKEY || MAPTILER_APIKEY === 'XL7pq33CzA3lwocBF57x' ) {
 const datasource = {
   provider: 'maptiler',
   apiKey: MAPTILER_APIKEY
-};
+}
 Procedural.init( { container, datasource } );
 
 const env = {
@@ -98,9 +98,12 @@ fetch( 'mountain.geojson' )
   .then( data => data.json() )
   .then( locations => {
     // Display first location
-    const [longitude, latitude] = locations.features[ 0 ].geometry.coordinates;
-    Procedural.displayLocation( { latitude, longitude } );
-  
+    if ( locations.features.length > 0 ) {
+      const [longitude, latitude] = locations.features[ 0 ].geometry.coordinates;
+      Procedural.displayLocation( { latitude, longitude } );
+    } else {
+      Procedural.displayLocation( { latitude: 24.8949, longitude: 91.8687 } );
+    }
 
     // Populate peak list
     locations.features.forEach( ( peak, i ) => {
@@ -120,7 +123,7 @@ fetch( 'mountain.geojson' )
     li.appendChild( p );
     peakList.appendChild( li );
     li.addEventListener( 'click', () => {
-      window.location = 'https://github.com/biswasjayanta/mountain-bangladesh/';
+      window.location = 'https://biswasjayanta.github.io/mountain-bangladesh/';
     } );
 
     // Add overlay showing all peaks as dots
